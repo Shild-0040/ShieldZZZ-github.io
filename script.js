@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Typewriter Effect ---
-    const roles = ['Developer', 'Designer', 'Creator', 'Problem Solver'];
+    const roles = ['开发者', '设计师', '创作者', '问题解决者'];
     const typeWriterElement = document.getElementById('typewriter');
     let roleIndex = 0;
     let charIndex = 0;
