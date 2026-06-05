@@ -1,0 +1,18 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(calc(100% - 32px), 340px);
+  }
+
+  .hero-layout,
+  .hero-copy,
+  .hero-bento,
+  .bento-grid {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
