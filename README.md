@@ -17,4 +17,4 @@
 - `index.html`：页面结构与中文文案
 - `styles.css`：视觉风格、响应式布局、明暗模式
 - `script.js`：移动导航、项目筛选、复制邮箱、滚动动效
-- `assets/hero-product-workbench.jpg`：首页视觉资产
+- `assets/ai-product-bento.jpg`：深色 Bento 首屏视觉资产
