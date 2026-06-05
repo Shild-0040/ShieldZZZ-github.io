@@ -1,176 +1,297 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | [Your Name]</title>
-    <meta name="description" content="Personal Portfolio of a Creative Developer">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Icons (using FontAwesome CDN for social icons, lightweight enough) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="dark-mode">
-    
-    <!-- Navigation -->
-    <header class="header">
-        <div class="container nav-container">
-            <a href="#" class="logo">[Your Name]</a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                </button>
-            </nav>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI 产品经理个人网站，呈现技术理解、产品判断、沟通推进和作品集。"
+    />
+    <title>AI 产品经理个人网站</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="返回首页">
+        <span class="brand-mark">PM</span>
+        <span>AI Product</span>
+      </a>
+      <nav class="nav" data-nav aria-label="主导航">
+        <a href="#profile">定位</a>
+        <a href="#work">项目</a>
+        <a href="#method">方法</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="切换明暗模式">
+          <span aria-hidden="true">◐</span>
+        </button>
+        <button class="icon-button menu-button" type="button" data-menu-toggle aria-label="打开导航">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="container hero-content fade-in-up">
-                <h1 class="hero-title">Hello, I'm <span class="highlight">[Your Name]</span></h1>
-                <h2 class="hero-subtitle">I am a <span id="typewriter"></span><span class="cursor">|</span></h2>
-                <a href="#projects" class="btn btn-primary">View Work</a>
-            </div>
-        </section>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content reveal">
+          <p class="eyebrow">2004.06.22 · 大四毕业生 · AI 产品经理</p>
+          <h1 id="hero-title">
+            <span>把 AI 能力翻译成</span>
+            <span>可理解、可使用、</span>
+            <span>可增长的产品体验</span>
+          </h1>
+          <p class="hero-copy">
+            我关注问题定义、用户洞察、需求拆解、Prompt 工作流、API 协作、体验评估与跨团队沟通。
+            擅长把技术边界、业务目标和用户场景放到同一张桌面上，推动想法走向清晰方案。
+          </p>
+          <div class="hero-actions" aria-label="页面快捷入口">
+            <a class="button primary" href="#work">查看作品集</a>
+            <a class="button ghost" href="#contact">联系我</a>
+          </div>
+          <div class="signal-row" aria-label="核心标签">
+            <span>技术理解</span>
+            <span>产品判断</span>
+            <span>表达协作</span>
+            <span>长期价值</span>
+          </div>
+        </div>
+      </section>
 
-        <!-- About Section -->
-        <section id="about" class="section about-section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">About Me</h2>
-                <div class="about-grid">
-                    <div class="about-image fade-in-up">
-                        <!-- Placeholder for Avatar -->
-                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=minimalist%20professional%20portrait%20avatar%20silhouette%20in%20dark%20tech%20style&image_size=square" alt="Profile Picture" loading="lazy">
-                    </div>
-                    <div class="about-text fade-in-up">
-                        <p>I am a passionate creative professional dedicated to building digital experiences that merge functionality with aesthetics.</p>
-                        <p>With a background in web development and UI design, I specialize in creating intuitive, performant, and accessible websites. I believe in the power of minimalism to convey complex ideas simply.</p>
-                        <div class="skills-list">
-                            <span>HTML5/CSS3</span>
-                            <span>JavaScript (ES6+)</span>
-                            <span>React/Vue</span>
-                            <span>UI/UX Design</span>
-                            <span>Git/GitHub</span>
-                        </div>
-                    </div>
+      <section class="section intro-band" id="profile" aria-labelledby="profile-title">
+        <div class="container section-grid">
+          <div class="section-lead reveal">
+            <p class="eyebrow">Profile</p>
+            <h2 id="profile-title">一个能把复杂问题讲清楚的人</h2>
+            <p>
+              我的优势不是把 AI 说得玄，而是把它拆成可讨论、可验证、可协作的产品问题：
+              谁需要它、在什么情境下需要、怎样降低使用门槛、怎样让团队形成共识。
+            </p>
+          </div>
+          <div class="capability-grid">
+            <article class="capability-card reveal">
+              <span class="capability-index">01</span>
+              <h3>技术理解力</h3>
+              <p>熟悉大模型应用链路、Prompt 设计、知识库、Agent 工作流与 API 接入方式，能把能力边界转成产品语言。</p>
+            </article>
+            <article class="capability-card reveal">
+              <span class="capability-index">02</span>
+              <h3>产品洞察力</h3>
+              <p>从用户访谈、竞品体验、业务流程和数据反馈中找问题，重视需求优先级、闭环指标和落地节奏。</p>
+            </article>
+            <article class="capability-card reveal">
+              <span class="capability-index">03</span>
+              <h3>沟通推进力</h3>
+              <p>能输出清晰 PRD、原型说明、会议纪要和决策记录，让设计、研发、运营与业务看到同一个目标。</p>
+            </article>
+            <article class="capability-card reveal">
+              <span class="capability-index">04</span>
+              <h3>内涵与判断</h3>
+              <p>关注用户信任、信息质量、体验一致性和产品长期价值，不把 AI 当成噱头，而是把它放进真实问题里。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Selected Work</p>
+            <h2 id="work-title">项目案例方向</h2>
+            <p>以下是适合 AI 产品经理展示的案例结构，可替换为你的真实项目经历、课程作品或实习产出。</p>
+          </div>
+
+          <div class="project-toolbar reveal" aria-label="项目筛选">
+            <button class="chip active" type="button" data-filter="all">全部</button>
+            <button class="chip" type="button" data-filter="ai">AI 应用</button>
+            <button class="chip" type="button" data-filter="growth">体验增长</button>
+            <button class="chip" type="button" data-filter="ops">效率工具</button>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal" data-category="ai">
+              <div>
+                <p class="project-type">AI 学习陪伴产品</p>
+                <h3>从“不会问”到“愿意持续用”的学习助手</h3>
+              </div>
+              <p>
+                针对学生在自学中提问模糊、反馈不连续的问题，设计问题引导、目标拆解、学习记录和复盘提醒，让 AI 更像一个可理解的学习伙伴。
+              </p>
+              <dl>
+                <div>
+                  <dt>我的职责</dt>
+                  <dd>需求访谈、用户旅程、原型、Prompt 流程、体验验收</dd>
                 </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section projects-section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">Selected Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project Card 1 -->
-                    <article class="project-card fade-in-up">
-                        <div class="project-image">
-                            <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20web%20dashboard%20ui%20design%20dark%20mode%20minimalist%20analytics&image_size=landscape_16_9" alt="Project 1 Preview" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Project Alpha</h3>
-                            <p class="project-desc">A comprehensive analytics dashboard designed for visualizing complex data streams in real-time.</p>
-                            <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">D3.js</span>
-                                <span class="tag">Node.js</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank" aria-label="View Source Code"><i class="fab fa-github"></i> Code</a>
-                                <a href="#" target="_blank" aria-label="View Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 2 -->
-                    <article class="project-card fade-in-up" style="transition-delay: 0.1s;">
-                        <div class="project-image">
-                            <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=mobile%20app%20interface%20design%20elegant%20clean%20finance%20app&image_size=landscape_16_9" alt="Project 2 Preview" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Project Beta</h3>
-                            <p class="project-desc">A mobile-first financial application focusing on user experience and secure transactions.</p>
-                            <div class="project-tags">
-                                <span class="tag">Vue.js</span>
-                                <span class="tag">Firebase</span>
-                                <span class="tag">SCSS</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank" aria-label="View Source Code"><i class="fab fa-github"></i> Code</a>
-                                <a href="#" target="_blank" aria-label="View Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 3 -->
-                    <article class="project-card fade-in-up" style="transition-delay: 0.2s;">
-                        <div class="project-image">
-                            <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=abstract%20generative%20art%20webgl%20interactive%20website&image_size=landscape_16_9" alt="Project 3 Preview" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Project Gamma</h3>
-                            <p class="project-desc">An experimental generative art piece using WebGL to create interactive visual landscapes.</p>
-                            <div class="project-tags">
-                                <span class="tag">Three.js</span>
-                                <span class="tag">WebGL</span>
-                                <span class="tag">GSAP</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank" aria-label="View Source Code"><i class="fab fa-github"></i> Code</a>
-                                <a href="#" target="_blank" aria-label="View Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
+                <div>
+                  <dt>交付产物</dt>
+                  <dd>PRD、交互原型、验收清单、首轮用户反馈报告</dd>
                 </div>
-            </div>
-        </section>
+              </dl>
+            </article>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">保持联系</h2>
-                <div class="contact-content fade-in-up">
-                    <p class="contact-text">我目前正在寻找新的机会和合作。欢迎随时联系！</p>
-                    
-                    <div class="email-wrapper">
-                        <span id="email-text">hello@yourdomain.com</span>
-                        <button id="copy-email-btn" aria-label="复制邮箱地址">
-                            <i class="far fa-copy"></i>
-                        </button>
-                        <span id="copy-feedback" class="tooltip">已复制!</span>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+            <article class="project-card reveal" data-category="ops ai">
+              <div>
+                <p class="project-type">校园知识问答助手</p>
+                <h3>把分散信息整理成可查询、可更新的服务入口</h3>
+              </div>
+              <p>
+                围绕教务通知、活动报名、办事流程等高频问题，设计知识维护后台、引用来源展示和人工转接机制，减少重复咨询成本。
+              </p>
+              <dl>
+                <div>
+                  <dt>我的职责</dt>
+                  <dd>场景梳理、信息架构、后台字段、异常兜底、运营机制</dd>
                 </div>
+                <div>
+                  <dt>交付产物</dt>
+                  <dd>功能清单、流程图、FAQ 结构、上线复盘模板</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="project-card reveal" data-category="growth">
+              <div>
+                <p class="project-type">产品体验优化</p>
+                <h3>让新用户更快理解“下一步该做什么”</h3>
+              </div>
+              <p>
+                通过首屏信息层级、任务引导、空状态文案和反馈提示优化，降低首次使用的理解成本，提高核心动作完成率。
+              </p>
+              <dl>
+                <div>
+                  <dt>我的职责</dt>
+                  <dd>体验走查、竞品分析、文案改写、埋点需求、A/B 方案</dd>
+                </div>
+                <div>
+                  <dt>交付产物</dt>
+                  <dd>问题清单、改版原型、指标口径、实验记录</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section method-band" id="method" aria-labelledby="method-title">
+        <div class="container method-layout">
+          <div class="section-lead reveal">
+            <p class="eyebrow">Method</p>
+            <h2 id="method-title">我的产品工作方式</h2>
+            <p>
+              我习惯先把问题问准，再把需求讲清楚。好的 AI 产品不是堆功能，
+              而是让人知道什么时候用、怎么用、为什么值得信任。
+            </p>
+          </div>
+          <ol class="timeline">
+            <li class="reveal">
+              <span>01</span>
+              <h3>听懂真实问题</h3>
+              <p>通过访谈、场景还原和行为观察，区分用户说出口的需求与真正卡住的环节。</p>
+            </li>
+            <li class="reveal">
+              <span>02</span>
+              <h3>定义产品价值</h3>
+              <p>明确目标用户、核心场景、成功指标和不做事项，让团队知道为什么值得做。</p>
+            </li>
+            <li class="reveal">
+              <span>03</span>
+              <h3>设计可落地方案</h3>
+              <p>把体验流程、功能边界、数据字段、异常处理和验收标准写清楚，减少反复沟通成本。</p>
+            </li>
+            <li class="reveal">
+              <span>04</span>
+              <h3>验证与复盘</h3>
+              <p>用用户反馈、使用数据和团队复盘判断方案是否有效，并把经验沉淀成下一版迭代依据。</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section communication-section" aria-labelledby="communication-title">
+        <div class="container communication-layout">
+          <div class="comm-panel reveal">
+            <p class="eyebrow">Communication</p>
+            <h2 id="communication-title">沟通不是“会说话”，而是让事情更容易推进</h2>
+            <p>
+              面对不同角色，我会切换表达粒度：对用户讲场景与收益，对研发讲边界与验收，
+              对业务讲目标与取舍，对自己保留清晰的决策记录。
+            </p>
+          </div>
+          <div class="comm-list">
+            <article class="comm-item reveal">
+              <h3>用户沟通</h3>
+              <p>用开放问题挖动机，用复述确认理解，用真实任务验证体验。</p>
+            </article>
+            <article class="comm-item reveal">
+              <h3>研发沟通</h3>
+              <p>提前明确字段、状态、边界、优先级和验收口径，降低返工。</p>
+            </article>
+            <article class="comm-item reveal">
+              <h3>业务沟通</h3>
+              <p>把方案放回目标、成本、节奏和风险中讨论，推动决策。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section toolkit-band" aria-labelledby="toolkit-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Toolkit</p>
+            <h2 id="toolkit-title">我的工具箱</h2>
+          </div>
+          <div class="toolkit-grid">
+            <div class="toolkit-column reveal">
+              <h3>产品与体验</h3>
+              <p>PRD、用户旅程、信息架构、交互原型、体验走查、竞品分析、需求优先级。</p>
             </div>
-        </section>
+            <div class="toolkit-column reveal">
+              <h3>AI 应用设计</h3>
+              <p>Prompt 流程、知识库结构、Agent 任务拆解、API 协作、效果评估、人工兜底。</p>
+            </div>
+            <div class="toolkit-column reveal">
+              <h3>数据与协作</h3>
+              <p>SQL 基础、指标口径、埋点需求、Figma、Axure、Notion、飞书、多角色同步。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-layout">
+          <div class="section-lead reveal">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">期待把想法聊成方案</h2>
+            <p>
+              这里可以替换成你的真实邮箱、微信、简历链接或作品集文档。建议保留一段简短自我介绍，
+              让访客快速知道你适合什么岗位与合作方式。
+            </p>
+          </div>
+          <div class="contact-card reveal">
+            <p class="contact-label">邮箱</p>
+            <a class="contact-value" href="mailto:your.email@example.com">your.email@example.com</a>
+            <button class="button primary full-width" type="button" data-copy="your.email@example.com">
+              复制邮箱
+            </button>
+            <div class="contact-links" aria-label="其他链接">
+              <a href="#" aria-label="替换为你的简历链接">简历</a>
+              <a href="#" aria-label="替换为你的作品集链接">作品集</a>
+              <a href="#" aria-label="替换为你的社交主页链接">社交主页</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> [你的名字]. 保留所有权利.</p>
-            <p class="built-with">由 <i class="fas fa-heart"></i> 和代码构建</p>
-        </div>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 AI Product Manager Portfolio</p>
+        <a href="#home">回到顶部</a>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <div class="toast" data-toast role="status" aria-live="polite">已复制到剪贴板</div>
+    <script src="./script.js"></script>
+  </body>
 </html>
