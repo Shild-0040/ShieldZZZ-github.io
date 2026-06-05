@@ -5,6 +5,8 @@ body {
 
 @media (max-width: 720px) {
   .container {
+    margin-right: auto;
+    margin-left: 16px;
     width: min(calc(100% - 32px), 340px);
   }
 
