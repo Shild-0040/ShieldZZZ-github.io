@@ -735,8 +735,12 @@ h3 {
     font-size: 1rem;
   }
 
+  .hero-actions {
+    flex-direction: column;
+  }
+
   .hero-actions .button {
-    flex: 1 1 150px;
+    width: 100%;
   }
 
   .hero-bento,
